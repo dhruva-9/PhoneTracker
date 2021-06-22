@@ -1,0 +1,26 @@
+{% extends 'dry.html' %}
+{% block tile %}
+    Results for: {{number}}!
+{% endblock tile %}
+
+{% block body %}
+    <!-- <h1>Carrier for {{number}} - {{response}}</h1> -->
+    <div class="container my-4 mx-4">
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Number</th>
+            <th scope="col">Provider</th>
+            <th scope="col">Region</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>{{number}}</td>
+            <td>{{Carrier}}</td>
+            <td>{{Region}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+{% endblock body %}

@@ -1,0 +1,20 @@
+{% extends 'dry.html' %}
+
+{% block title %}
+    Uh OH! 404
+{% endblock title %}
+
+{% block body %}
+    <h1>Sorry We couldnt find the number - {{number}}</h1>
+    <h2>Check with some another number</h2>
+    <div class="container my-4">
+        <form action="submitForm" method="POST">{% csrf_token %}
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">Enter Number</label>
+              <input type="number" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name = "text" required>
+              <div id="emailHelp" class="form-text">We'll never share your personal number with anyone else.</div>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+          </div>
+{% endblock body %}
